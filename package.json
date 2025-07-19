@@ -1,0 +1,47 @@
+{
+  "name": "nookure-frontend",
+  "private": true,
+  "type": "module",
+  "platform": "node",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production && react-router build",
+    "build:dev": "cross-env NODE_ENV=development && react-router build",
+    "dev": "NODE_ENV=development react-router dev",
+    "start": "cross-env NODE_ENV=production react-router-serve ./build/server/index.js",
+    "typecheck": "react-router typegen && tsc",
+    "cloudflare:dev": "bunx wrangler pages dev ./build/client"
+  },
+  "dependencies": {
+    "@cloudflare/workers-types": "^4.20241230.0",
+    "@nextui-org/react": "^2.6.10",
+    "@react-router/cloudflare": "^7.1.1",
+    "@react-router/node": "^7.1.1",
+    "@react-router/serve": "^7.1.1",
+    "framer-motion": "^11.15.0",
+    "isbot": "^5.1.17",
+    "mitt": "^3.0.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router": "^7.1.1",
+    "react-top-loading-bar": "^3.0.2",
+    "wrangler": "^3.99.0",
+    "zustand": "^5.0.2"
+  },
+  "devDependencies": {
+    "@react-router/dev": "^7.1.1",
+    "@types/node": "^20",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
+    "autoprefixer": "^10.4.20",
+    "cross-env": "^7.0.3",
+    "postcss": "^8.4.49",
+    "sharp": "^0.33.5",
+    "tailwindcss": "^3.4.16",
+    "tailwindcss-view-transitions": "^0.1.1",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11",
+    "vite-plugin-commonjs": "^0.10.4",
+    "vite-plugin-image-optimizer": "^1.1.8",
+    "vite-tsconfig-paths": "^5.1.4"
+  }
+}
